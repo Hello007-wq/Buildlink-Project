@@ -30,10 +30,10 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-8 sm:py-12 bg-gray-50">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4">Connecting You to Trusted Builders, Plumbers, and Electricians Across Zimbabwe</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">Connecting You to Trusted Builders, Plumbers, and Electricians Across Zimbabwe</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-6 sm:mt-8">
           {services.map(service => (
             <div key={service.id} className="bg-white p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
               <div className="text-4xl text-blue-500 mb-4">{service.icon}</div>

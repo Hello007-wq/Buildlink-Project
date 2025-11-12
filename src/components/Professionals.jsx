@@ -33,13 +33,13 @@ const Professionals = () => {
   ];
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-8 sm:py-12 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-sm font-bold text-blue-500 uppercase mb-2">Our Professionals</h2>
-          <h3 className="text-3xl font-bold">Meet Top-Rated Professionals Ready to Work With You</h3>
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold">Meet Top-Rated Professionals Ready to Work With You</h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {professionals.map(pro => (
             <div key={pro.id} className="flex items-center bg-gray-50 p-6 rounded-lg shadow-md">
               <img src={pro.image} alt={pro.name} className="w-24 h-24 rounded-full mr-6 border-4 border-blue-500" />
