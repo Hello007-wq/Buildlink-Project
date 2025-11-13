@@ -4,32 +4,32 @@ import HeroBg from '../assets/hero-image.jpg'; // local background image
 const ProvidersHero = () => {
   return (
     <div
-      className="bg-cover bg-center h-screen relative"
+      className="bg-cover bg-center min-h-screen lg:h-screen relative"
       style={{ backgroundImage: `url(${HeroBg})` }}
     >
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 h-full flex flex-col justify-between relative z-10 text-white">
+      <div className="container mx-auto px-4 sm:px-6 h-full flex flex-col justify-between relative z-10 text-white">
         {/* Top text + buttons */}
-        <div className="pt-32">
-          <h1 className="text-5xl font-bold mb-4">Featured Provider</h1>
-          <p className="text-xl mb-8">
-            Find what we are looking for at BuildLinks
+        <div className="pt-20 sm:pt-24 md:pt-32">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center md:text-left">Featured Provider</h1>
+          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-center md:text-left">
+            Find what you are looking for at BuildLink
           </p>
 
           {/* Buttons */}
-          <div className="flex items-center space-x-4">
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 font-semibold">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-4 sm:items-start">
+            <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 font-semibold transition-colors duration-300 w-full sm:w-auto">
               Explore More
             </button>
-            <button className="flex items-center space-x-2 text-white">
-              <div className="w-12 h-12 bg-white bg-opacity-25 rounded-full flex items-center justify-center">
+            <button className="flex items-center space-x-2 text-white hover:text-blue-300 transition-colors duration-300">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white bg-opacity-25 rounded-full flex items-center justify-center">
                 {/* Play Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-5 w-5 sm:h-6 sm:w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -42,7 +42,7 @@ const ProvidersHero = () => {
                   />
                 </svg>
               </div>
-              <span>Watch Video</span>
+              <span className="text-sm sm:text-base">Watch Video</span>
             </button>
           </div>
         </div>
@@ -79,11 +79,10 @@ const ProvidersHero = () => {
               (item, idx) => (
                 <button
                   key={idx}
-                  className={`px-6 py-2 text-lg rounded-full font-medium border-2 border-sky-500 ${
-                    idx === 0
+                  className={`px-6 py-2 text-lg rounded-full font-medium border-2 border-sky-500 ${idx === 0
                       ? "bg-sky-500 text-white"
                       : "bg-white/80 text-gray-700 hover:bg-sky-100"
-                  }`}
+                    }`}
                 >
                   {item}
                 </button>

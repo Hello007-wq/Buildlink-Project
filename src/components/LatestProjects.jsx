@@ -8,31 +8,31 @@ const LatestProjects = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-8 sm:py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8">Latest Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Latest Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map(project => (
-            <div key={project.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+            <div key={project.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img src={project.image} alt={project.title} className="w-full h-48 sm:h-64 object-cover" />
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 line-clamp-2">{project.title}</h3>
                 <div className="flex items-center mb-4">
                   {[...Array(project.rating)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.16c.969 0 1.371 1.24.588 1.81l-3.363 2.44a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.363-2.44a1 1 0 00-1.175 0l-3.363 2.44c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.07 9.384c-.783-.57-.38-1.81.588-1.81h4.16a1 1 0 00.95-.69l1.286-3.957z" />
                     </svg>
                   ))}
                 </div>
-                <button className="w-full bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-600">
+                <button className="w-full bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-600 transition-colors duration-300">
                   See More
                 </button>
               </div>
             </div>
           ))}
         </div>
-        <div className="text-center mt-8">
-          <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 font-semibold">
+        <div className="text-center mt-6 sm:mt-8">
+          <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 font-semibold transition-colors duration-300">
             Load More
           </button>
         </div>

@@ -13,19 +13,19 @@ const SearchResults = () => {
   ];
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-8 sm:py-12 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold">Search Results</h2>
-          <a href="#" className="text-blue-500 font-semibold">More &gt;</a>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 gap-4">
+          <h2 className="text-2xl sm:text-3xl font-bold">Search Results</h2>
+          <a href="#" className="text-blue-500 font-semibold hover:text-blue-600 transition-colors duration-300">More &gt;</a>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {results.map(result => (
-            <div key={result.id} className="bg-blue-800 text-white p-6 rounded-lg shadow-lg">
-              <img src={result.image} alt={result.name} className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white" />
-              <h3 className="text-xl font-bold text-center">{result.name}</h3>
-              <p className="text-center text-blue-200 mb-4">{result.description}</p>
-              <button className="w-full bg-white text-blue-800 px-4 py-2 rounded-md font-semibold hover:bg-gray-200">
+            <div key={result.id} className="bg-blue-800 text-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img src={result.image} alt={result.name} className="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto mb-3 sm:mb-4 border-4 border-white" />
+              <h3 className="text-lg sm:text-xl font-bold text-center">{result.name}</h3>
+              <p className="text-center text-blue-200 mb-4 text-sm sm:text-base line-clamp-3">{result.description}</p>
+              <button className="w-full bg-white text-blue-800 px-4 py-2 rounded-md font-semibold hover:bg-gray-200 transition-colors duration-300">
                 View Details
               </button>
             </div>

@@ -13,19 +13,19 @@ const OtherProviders = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-8 sm:py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-sm font-bold text-blue-500 uppercase mb-2">More Providers</h2>
-          <h3 className="text-3xl font-bold">Other Featured Providers</h3>
+          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold">Other Featured Providers</h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {providers.map(provider => (
-            <div key={provider.id} className="bg-blue-800 text-white p-6 rounded-lg shadow-lg">
-              <img src={provider.image} alt={provider.name} className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white object-cover" />
-              <h3 className="text-xl font-bold text-center">{provider.name}</h3>
-              <p className="text-center text-blue-200 mb-4 text-sm">{provider.description}</p>
-              <button className="w-full bg-white text-blue-800 px-4 py-2 rounded-md font-semibold hover:bg-gray-200">
+            <div key={provider.id} className="bg-blue-800 text-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img src={provider.image} alt={provider.name} className="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto mb-3 sm:mb-4 border-4 border-white object-cover" />
+              <h3 className="text-lg sm:text-xl font-bold text-center">{provider.name}</h3>
+              <p className="text-center text-blue-200 mb-4 text-xs sm:text-sm line-clamp-3">{provider.description}</p>
+              <button className="w-full bg-white text-blue-800 px-4 py-2 rounded-md font-semibold hover:bg-gray-200 transition-colors duration-300">
                 View Details
               </button>
             </div>
