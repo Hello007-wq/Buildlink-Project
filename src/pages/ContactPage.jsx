@@ -7,31 +7,30 @@ export default function ContactPage() {
     <div className="w-full">
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+        className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${ContactHero})` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h2 className="text-lg font-light">Welcome to Buildlinks</h2>
-          <h1 className="text-4xl md:text-5xl font-bold mt-2">Contact Us</h1>
-          <p className="text-xl mt-4 max-w-3xl mx-auto">
-          <span className="text-blue-400 font-semibold">Certified </span> builders, plumbers, and electricians across span   <span className="text-blue-400 font-semibold">Zimbabwe</span> — compare, connect, and hire with confidence. —{" "}
-            , and hire with confidence.
+        <div className="relative z-10 text-center text-white px-4 sm:px-6">
+          <h2 className="text-base sm:text-lg font-light">Welcome to BuildLink</h2>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2">Contact Us</h1>
+          <p className="text-base sm:text-lg md:text-xl mt-4 max-w-3xl mx-auto">
+            <span className="text-blue-400 font-semibold">Certified</span> builders, plumbers, and electricians across <span className="text-blue-400 font-semibold">Zimbabwe</span> — compare, connect, and hire with confidence.
           </p>
         </div>
       </section>
 
       {/* Contact Info */}
-      <section className="bg-[#0c3c60] text-white py-16 px-6 md:px-20">
+      <section className="bg-[#0c3c60] text-white py-12 sm:py-16 px-4 sm:px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-10">
+          <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-10">
             Contact & Join Together
           </h2>
-          <p className="text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-center mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
             Our contacts are always available 24/7 ready to help you with your
             services. Get in touch.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
             <div className="bg-white text-black rounded-xl p-6 shadow-md">
               <p className="font-bold">Location</p>
               <p className="text-sm mt-2">
